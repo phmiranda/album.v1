@@ -1,0 +1,8 @@
+# comentários
+.idea/
+nbproject/
+.vscode/
+
+# comentários
+vendor/
+node_modules/

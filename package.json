@@ -1,0 +1,9 @@
+{
+  "name": "angularjs",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular":"1.7.3",
+    "bootstrap":"3.3.*",
+    "jquery": "3.3.1"
+  }
+}
