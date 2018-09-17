@@ -3,5 +3,5 @@ var http = require('http')
 db = require('./config/database');
 
 http.createServer(app).listen(3000, function() {
-    console.log('Servidor escutando na porta: ' + this.address().port);
+    console.log('O servidor está sendo executado na porta: ' + this.address().port);
 });
