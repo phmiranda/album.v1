@@ -1,0 +1,2 @@
+/* comentários */
+angular.module('alurapic', []);

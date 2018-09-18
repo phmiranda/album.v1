@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="alurapic">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title> Alurapic </title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/assets.css">
 </head>
 <body>
     <!-- comentários -->
     <div class="container">
         <h1 class="text-center"> Alura Pictures </h1>
+        <img class="img-responsive center-block" src="{{foto.url}}" alt="{{foto.titulo}}">
     </div>
 
     <!-- comentários -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/angular.js"></script>
+    <script src="js/main.js"></script>
+    <script src="app/controllers/fotos-controller.js"></script>
 </body>
 </html>
