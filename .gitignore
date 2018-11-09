@@ -1,8 +1,11 @@
-# comentários
+# comentários.
 .idea/
 nbproject/
 .vscode/
 
-# comentários
+# comentários.
+package-lock.json
+
+# comentários.
 vendor/
 node_modules/
