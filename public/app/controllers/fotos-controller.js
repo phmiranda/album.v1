@@ -1,19 +1,17 @@
 /* comentários */
-angular.module('alurapic').controller('FotosController', function ($scope, $http) {
-    /* comentários */
-    $scope.fotos = [];
-    $http.get('v1/fotos')
-        .success(function(msg) {
-            console.log(msg);
-            $scope.fotos = msg;
-        }).error(function (msg) {
-        console.log(msg);
-    });
-});
+
+//angular.module('alurapic').controller('FotosController', function ($scope, $http) {
+//    $scope.fotos = [];
+//    $http.get('v1/fotos')
+//        .success(function(msg) {
+//            console.log(msg);
+//            $scope.fotos = msg;
+//        }).error(function (msg) {
+//        console.log(msg);
+//    });
+//});
 
 
-
-/*
 $scope.fotos = []
 var promise = $scope.fotos = $http.get('v1/fotos');
 promise.then(function (retorno) {
@@ -21,4 +19,3 @@ promise.then(function (retorno) {
 }).catch(function (error) {
    console.log(error);
 });
-*/
