@@ -1,15 +1,16 @@
 {
   "name": "angularjs",
-  "version": "0.0.1",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Sistema de Administração de Imagens",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "@phmiranda",
   "license": "ISC",
   "dependencies": {
+    "admin-lte": "^2.4.10",
     "angular": "1.7.3",
     "body-parser": "^1.12.3",
     "bootstrap": "^3.4.1",
