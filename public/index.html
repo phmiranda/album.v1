@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html ng-app="alurapic" lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title> Alurapic </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alura ™</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/assets.css">
 </head>
 <body ng-controller="FotosController">
-    <!-- comentários -->
     <div class="container">
         <!-- comentários -->
-        <div class="jumbotron">
-            <h1 class="text-center"> Alura Pictures </h1>
-        </div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-responsive" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">ALURA</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="menu-responsive">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Fotos<span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Cadastrar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
         <!-- comentários -->
         <div ng-repeat="foto in fotos" class="panel panel-primary">
