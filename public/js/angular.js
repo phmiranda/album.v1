@@ -2236,7 +2236,7 @@ function setupModuleLoader(window) {
      *
      * # Module
      *
-     * A module is a collection of services, directives, controllers, filters, and configuration information.
+     * A module is a collection of services, directives, controller, filters, and configuration information.
      * `angular.module` is used to configure the {@link auto.$injector $injector}.
      *
      * ```js
@@ -2495,7 +2495,7 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#controller
            * @module ng
-           * @param {string|Object} name Controller name, or an object map of controllers where the
+           * @param {string|Object} name Controller name, or an object map of controller where the
            *    keys are the names and the values are the constructors.
            * @param {Function} constructor Controller constructor function.
            * @description
@@ -3461,7 +3461,7 @@ function jqLiteInheritedData(element, name, value) {
 
     // If dealing with a document fragment node with a host element, and no parent, use the host
     // element as the parent. This enables directives within a Shadow DOM or polyfilled Shadow DOM
-    // to lookup parent controllers.
+    // to lookup parent controller.
     element = element.parentNode || (element.nodeType === NODE_TYPE_DOCUMENT_FRAGMENT && element.host);
   }
 }
@@ -8819,9 +8819,9 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
    *      See {@link ng.$compile#-bindtocontroller- `bindToController`}.
    *    - `transclude` – `{boolean=}` – whether {@link $compile#transclusion content transclusion} is enabled.
    *      Disabled by default.
-   *    - `require` - `{Object<string, string>=}` - requires the controllers of other directives and binds them to
+   *    - `require` - `{Object<string, string>=}` - requires the controller of other directives and binds them to
    *      this component's controller. The object keys specify the property names under which the required
-   *      controllers (object values) will be bound. See {@link ng.$compile#-require- `require`}.
+   *      controller (object values) will be bound. See {@link ng.$compile#-require- `require`}.
    *    - `$...` – additional properties to attach to the directive factory function and the controller
    *      constructor function. (This is used by the component router to annotate)
    *
@@ -10223,7 +10223,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             childTranscludeFn = compilationGenerator(mightHaveMultipleTransclusionError, $template, transcludeFn, terminalPriority,
                                         replaceDirective && replaceDirective.name, {
                                           // Don't pass in:
-                                          // - controllerDirectives - otherwise we'll create duplicates controllers
+                                          // - controllerDirectives - otherwise we'll create duplicates controller
                                           // - newIsolateScopeDirective or templateDirective - combining templates with
                                           //   element transclusion doesn't make sense.
                                           //
@@ -10488,7 +10488,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             initializeDirectiveBindings(controllerScope, attrs, controller.instance, bindings, controllerDirective);
           }
 
-        // Bind the required controllers to the controller, if `require` is an object and `bindToController` is truthy
+        // Bind the required controller to the controller, if `require` is an object and `bindToController` is truthy
         forEach(controllerDirectives, function(controllerDirective, name) {
           var require = controllerDirective.require;
           if (controllerDirective.bindToController && !isArray(require) && isObject(require)) {
@@ -10496,7 +10496,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
           }
         });
 
-        // Handle the init and destroy lifecycle hooks on all controllers that have them
+        // Handle the init and destroy lifecycle hooks on all controller that have them
         forEach(elementControllers, function(controller) {
           var controllerInstance = controller.instance;
           if (isFunction(controllerInstance.$onChanges)) {
@@ -10677,7 +10677,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
         // For directives with element transclusion the element is a comment.
         // In this case .data will not attach any data.
-        // Instead, we save the controllers for the element in a local hash and attach to .data
+        // Instead, we save the controller for the element in a local hash and attach to .data
         // later, once we have the actual element.
         elementControllers[directive.name] = controllerInstance;
         $element.data('$' + directive.name + 'Controller', controllerInstance.instance);
@@ -11553,7 +11553,7 @@ function identifierForController(controller, ident) {
  *
  * @description
  * The {@link ng.$controller $controller service} is used by AngularJS to create new
- * controllers.
+ * controller.
  *
  * This provider allows controller registration via the
  * {@link ng.$controllerProvider#register register} method.
@@ -11573,7 +11573,7 @@ function $ControllerProvider() {
   /**
    * @ngdoc method
    * @name $controllerProvider#register
-   * @param {string|Object} name Controller name, or an object map of controllers where the keys are
+   * @param {string|Object} name Controller name, or an object map of controller where the keys are
    *    the names and the values are the constructors.
    * @param {Function|Array} constructor Controller constructor fn (optionally decorated with DI
    *    annotations in the array notation).
@@ -11609,7 +11609,7 @@ function $ControllerProvider() {
      * @return {Object} Instance of given controller.
      *
      * @description
-     * `$controller` service is responsible for instantiating controllers.
+     * `$controller` service is responsible for instantiating controller.
      *
      * It's just a simple call to {@link auto.$injector $injector}, but extracted into
      * a service, so that one can override this service with [BC version](https://gist.github.com/1649788).
@@ -19002,7 +19002,7 @@ function $RootScopeProvider() {
        * iterations exceeds 10.
        *
        * Usually, you don't call `$digest()` directly in
-       * {@link ng.directive:ngController controllers} or in
+       * {@link ng.directive:ngController controller} or in
        * {@link ng.$compileProvider#directive directives}.
        * Instead, you should call {@link ng.$rootScope.Scope#$apply $apply()} (typically from within
        * a {@link ng.$compileProvider#directive directive}), which will force a `$digest()`.
@@ -29618,7 +29618,7 @@ var ngIncludeDirective = ['$templateRequest', '$anchorScroll', '$animate',
               ctrl.template = response;
 
               // Note: This will also link all children of ng-include that were contained in the original
-              // html. If that content contains controllers, ... they could pollute/change the scope.
+              // html. If that content contains controller, ... they could pollute/change the scope.
               // However, using ng-include on an element with additional content does not make sense...
               // Note: We can't remove them in the cloneAttchFn of $transclude as that
               // function is called before linking the content, which would apply child
