@@ -2,15 +2,15 @@
 var express = require('express')
     ,app = express()
     ,bodyParser = require('body-parser')
-    ,routes = require('../app/routes');
+    ,routes = require('../config/routes');
 
-/* comentários */
+/* comentário */
 app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-/* comentários */
+/* comentário */
 routes(app);
 
-/* comentários */
+/* comentário */
 module.exports = app;

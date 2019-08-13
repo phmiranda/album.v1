@@ -1,2 +1,2 @@
 /* comentários */
-angular.module('alurapic', []);
+angular.module('album', []);

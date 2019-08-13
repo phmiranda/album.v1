@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="alurapic" lang="pt-br">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/assets.css">
 </head>
-<body ng-controller="FotosController">
+<body>
     <div class="container">
-        <!-- comentários -->
+        <!-- comentário -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-responsive" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
@@ -22,7 +21,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">ALURA</a>
+                    <a class="navbar-brand" href="#">Álbum Fotográfico</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="menu-responsive">
@@ -34,22 +33,22 @@
             </div>
         </nav>
 
-        <!-- comentários -->
-        <div ng-repeat="foto in fotos" class="panel panel-primary">
+        <!-- comentário -->
+        <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">{{foto.titulo}}</h3>
+                <h3 class="panel-title"></h3>
             </div>
             <div class="panel-body">
-                <img class="img-responsive center-block container-img" src="{{foto.url}}" alt="{{foto.titulo}}">
+                <img class="img-responsive center-block container-img" src="#" alt="">
             </div>
         </div>
     </div>
 
-    <!-- comentários -->
+    <!-- comentário -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/angular.js"></script>
     <script src="js/main.js"></script>
-    <script src="app/controller/fotos-controller.js"></script>
+    <script src="../app/controller/fotos-controller.js"></script>
 </body>
 </html>

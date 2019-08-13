@@ -1,6 +1,5 @@
-/* comentários */
-angular.module('alurapic').controller('FotosController', function ($scope, $http) {
-   //
+angular.module('album').controller('FotosController', function ($scope, $http) {
+   /* comentários */
    $scope.fotos = [];
    $http.get('v1/fotos').success(function(msg){
       $scope.fotos = msg;
@@ -9,7 +8,7 @@ angular.module('alurapic').controller('FotosController', function ($scope, $http
       console.log(msg);
    });
 
-   /* busca a API usando promisses */
+   /* utilizando promisses no controller */
    /**
    $scope.fotos = [];
    var promise = $scope.fotos = $http.get('v1/fotos');
