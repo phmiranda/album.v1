@@ -1,2 +1,1 @@
-/* comentários */
 angular.module('album', []);
