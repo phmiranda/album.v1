@@ -1,16 +1,13 @@
-/* comentários */
 var Datastore = require('nedb')
-    ,dbName = 'angularjs.db'
+    ,dbName = 'data.db'
     ,db;
 
-/* comentários */
 if(!db) {
     db = new Datastore({
-        filename: dbName,
-        autoload: true
+        filename: dbName, 
+        autoload: true 
     });
     console.log('Banco ' + dbName + ' pronto para uso')
 }
 
-/* comentários */
 module.exports = db;
