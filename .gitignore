@@ -1,14 +1,12 @@
-# comentários.
+# comentário
 .idea/
-nbproject/
 .vscode/
 
-# comentários.
-public/default.php
+# comentário
+*.iml
 
-# comentários.
+# comentário
 package-lock.json
 
-# comentários.
-vendor/
+# comentário
 node_modules/
