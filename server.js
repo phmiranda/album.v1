@@ -3,6 +3,6 @@ var http = require('http')
     db = require('./config/database');
 
 http.createServer(app).listen(3000, function() {
-    console.log('Executando o sistema em modo de desenvolvimento no endereço: ' + this.address().port);
+    console.log('Servidor escutando na porta: ' + this.address().port);
 });
 
