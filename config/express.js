@@ -1,7 +1,7 @@
 var express = require('express')
     ,app = express()
     ,bodyParser = require('body-parser')
-    ,routes = require('../app/routes');
+    ,routes = require('./route');
 
 app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({extended: true}));
