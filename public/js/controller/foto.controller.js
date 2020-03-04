@@ -3,10 +3,10 @@ angular.module('album').controller('FotoController', function ($scope, $http) {
     $scope.fotos = [];
 
     // declara uma promise(promessa) de retorno dos dados, pois a requisição é assíncrona.
-    $http.get('v1/fotos').then(function (retorno) {
-        $scope.fotos = retorno.data;
+    $http.get('v1/fotos').success(function (retorno) {
+        $scope.fotos = retorno;
         console.log(retorno);
-    }, function (error) {
+    }).error(function (error) {
         console.log(error);
     });
 });
