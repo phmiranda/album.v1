@@ -1,0 +1,38 @@
+<!-- modal de cadastro de uma nova imagem -->
+<div id="modal-cadastrar" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Formulário de Cadastro de Foto</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="titulo">Título:</label>
+                        <input id="titulo" class="form-control" type="text" name="titulo">
+                    </div>
+                    <div class="form-group">
+                        <label for="url">URL da Imagem:</label>
+                        <input id="url" class="form-control" type="text" name="url">
+                    </div>
+                    <div class="form-group">
+                        <label for="url">Álbum de Fotografia:</label>
+                        <select id="album" class="form-control" name="album">
+                            <option value="">Viagens</option>
+                            <option value="">Festas</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao">Descrição:</label>
+                        <textarea id="descricao" class="form-control" name="descricao"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Confirmar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
