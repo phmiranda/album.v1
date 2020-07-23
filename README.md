@@ -9,4 +9,5 @@
 </p>
 
 ## Acesso
-> https://calendario.echosix.com.br
+> https://album.v1.echosix.com.br
+> https://album.v2.echosix.com.br
